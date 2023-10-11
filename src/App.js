@@ -1,14 +1,11 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import Albums from "./components/albums";
+import Slider from "./components/Slider/Slider";
+
 
 function App() {
-    return (
-        <>
-            <Button variant="contained">Hello world</Button>
-            <Albums></Albums>
-        </>
-    )
+  return <>
+    <Slider/>
+  </>
 
 
 }

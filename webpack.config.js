@@ -43,6 +43,19 @@ module.exports = (env, { mode }) => {
           ],
         },
         {
+          test: /\.s[ac]ss$/i,
+          use: [
+            // extracts css to a separate file
+            MiniCssExtractPlugin.loader,
+            // translates CSS into CommonJS
+            "css-loader",
+            // edits and modifies rules
+            "postcss-loader",
+            // compiles Sass to CSS
+            "sass-loader",
+          ],
+        },
+        {
           test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i, // assets config
           type: 'asset/resource'
         }
